@@ -14,6 +14,8 @@ if response.status_code == 200:
     # Iterando sobre os posts e imprimindo seus títulos
     for post in data:
         print("Titulo: "+post['title'])
+        print("descri: "+post['body'].replace('\n', ''))
+        print("")
 else:
     # Se a requisição não foi bem-sucedida, imprimir o código de status
     print(f"Erro ao acessar a API. Código de status: {response.status_code}")
